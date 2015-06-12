@@ -20,7 +20,12 @@ E.g. post build script command:
 
 $(TargetDir)\SEBench.exe "$(TargetDir)$(TargetFileName)"
 
-Set the post build event to run "always". You may need to run Rebuild if the window doesn't show if you haven't made any code changes.
+Set the post build event to run "always". You may need to run Rebuild if the window doesn't show if you haven't made any code changes. If the program continues to prompt you for your DLL location, it is probably because your path has a space in it. If that's the case, try:
+
+$(TargetDir)\SEBench.exe "$(TargetDir)$(TargetFileName)"
+
+Note the quotes around the argument.
+
 
 E.g. sample script class:
 
