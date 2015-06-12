@@ -1,7 +1,7 @@
 # SEBench
 Space Engineers coding workbench. Tool design to make SE programming easier.
 
-This tool makes it easier to write SE ingame scripts in Visual Studio and manage your ingame script libraries. Set it up as a post build event on your ingame script assembly project and the tool will compile/format the script and present it in a window to easily copy & paste directly into a Programmable Block.
+This tool makes it easier to write SE ingame scripts in Visual Studio and manage your ingame script libraries. Set it up as a post build event on your ingame script Class Library project and the tool will compile/format the script and present it in a window to easily copy & paste directly into a Programmable Block.
 
 This tool uses ILSpy to decompile attributed classes marked for ingame scripts (SEIGScript attribute).
 
@@ -12,7 +12,7 @@ Space Engineers game assemblies (Sandbox.Common, VRage.Game, VRage.Math)
 
 How to use:
 
-Make an assembly project in Visual Studio, refrence SEBench.exe and the Space Engineers ingame script references.
+Make a Class Library project in Visual Studio, refrence SEBench.exe and the Space Engineers ingame script references.
 
 Setup a Post build event in your project to run SEBench.exe with your compiled assembly as a parameter. If you have more than one SEIGScript class in your final assembly, SEBench will popup each of them in a window. If you only want to see a specific one, use the -class/-c className argument.
 
@@ -57,7 +57,7 @@ Attributes:
 
 SEIGScript - Attribute available to classes only, instructs SEBench to produce a ingame compiled script of this class' body. Takes params string arguments of named SEIGTemplate template classes. These named template classes will get included in your compiled output.
 
-SEIGExclude - available to all types instructs SEBench to exclude these types from the compiled output. Useful to have variables that are required for Visual Studio to compile the assembly but that are not required for the Programmable block.
+SEIGExclude - available to all types, instructs SEBench to exclude these types from the compiled output. Useful to have variables that are required for Visual Studio to compile the assembly but that are not required for the Programmable block.
 
 SEIGTemplate - currently only available to classes, compiles named templates that may be included in your scripts.
 
