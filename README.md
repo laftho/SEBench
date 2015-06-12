@@ -8,6 +8,7 @@ This tool uses ILSpy to decompile attributed classes marked for ingame scripts (
 Dependencies:
 
 http://ilspy.net/
+Space Engineers game assemblies (Sandbox.Common, VRage.Game, VRage.Math)
 
 How to use:
 
