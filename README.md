@@ -14,11 +14,11 @@ How to use:
 
 Make a Class Library project in Visual Studio, refrence SEBench.exe and the Space Engineers ingame script references.
 
-Setup a Post build event in your project to run SEBench.exe with your compiled assembly as a parameter. If you have more than one SEIGScript class in your final assembly, SEBench will popup each of them in a window. If you only want to see a specific one, use the -class/-c className argument.
+Setup a Post build event in your project to run SEBench.exe with your compiled assembly as a parameter. If you have more than one SEIGScript class in your final assembly, SEBench will popup each of them in a window. If you only want to see a specific one, use the -class/-c className argument. Ensure individual paths are quoted if they may contain spaces.
 
 E.g. post build script command:
 
-$(TargetDir)\SEBench.exe $(TargetDir)$(TargetFileName)
+$(TargetDir)\SEBench.exe "$(TargetDir)$(TargetFileName)"
 
 Set the post build event to run "always". You may need to run Rebuild if the window doesn't show if you haven't made any code changes.
 
