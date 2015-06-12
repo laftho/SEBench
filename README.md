@@ -26,10 +26,6 @@ E.g. sample script class:
 ```csharp
 using ExtSE;
 using Sandbox.ModAPI.Ingame;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace SEBench.Sample
 {

@@ -1,14 +1,7 @@
-﻿using ICSharpCode.Decompiler;
-using ICSharpCode.ILSpy;
-using Mono.Cecil;
-using SEBench.ExtSE;
+﻿using SEBench.ExtSE;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SEBench
@@ -43,8 +36,6 @@ namespace SEBench
             {
                 var openFile = new OpenFileDialog();
 
-                //openFile.Filter = "*.dll|*.exe";
-
                 openFile.Multiselect = true;
                 openFile.SupportMultiDottedExtensions = true;
                 openFile.Title = "Select your SE script assemblies";
@@ -72,7 +63,5 @@ namespace SEBench
                 new CodeForm(code, specificClass).ShowDialog();
             }
         }
-
-        
     }
 }
